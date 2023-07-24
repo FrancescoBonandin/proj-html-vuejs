@@ -31,4 +31,8 @@ export default {
 
 <style lang="scss">
 @use "assets/scss/main" as *;
+
+  ul{
+    list-style-type: none;
+  }
 </style>
