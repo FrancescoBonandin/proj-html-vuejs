@@ -53,7 +53,7 @@ export default {
 
         <section class="header-main">
 
-            <div class="container">
+            <div class="container py-3">
 
                 <div class="row row-cols-3 justify-content-between align-items-center">
 
