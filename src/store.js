@@ -2,7 +2,6 @@ import { reactive } from "vue";
 
 export const store= reactive({
 
-    isMouseOnSlider:false,
 
     boxImages:[
         {
@@ -111,10 +110,76 @@ export const store= reactive({
     ],
     courseCards:[
 
-        {image:'../assets/img/courses/'
+        {
+            image:'../assets/img/courses/artist-course-08-480x480.jpg',
+            price:'18.00',
+            courseName:'The Acrylic Painting Academy',
+            lessons:'4',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-07-480x480.jpg',
+            price:'21.00',
+            courseName:'Drawing and Shading: Complete Course',
+            lessons:'14',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-06-480x480.jpg',
+            price:'19.00',
+            courseName:'The Color Theory for Digital Artist',
+            lessons:'7',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-05-480x480.jpg',
+            price:'35.00',
+            courseName:'Ultimate Guide to Digital Sketching for Beginners',
+            lessons:'14',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-04-480x480.jpg',
+            price:'19.00',
+            courseName:'Portrait Drawing The Smart Way',
+            lessons:'2',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-03-480x480.jpg',
+            price:'19.00',
+            courseName:'Mastering The Watercolor Painting From Beginner',
+            lessons:'9',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-02-480x480.jpg',
+            price:'25.00',
+            courseName:'The Art & Science Drawing',
+            lessons:'4',
+            students:'50'
+
+        },
+        {
+            image:'../assets/img/courses/artist-course-01-480x480.jpg',
+            price:'22.00',
+            courseName:'The Colored Pencil Drawing Course',
+            lessons:'6',
+            students:'50'
 
         },
 
+    ],
+    blogPost:[
+        {
+            image:
+        }
     ]
 
 })

@@ -31,7 +31,7 @@ export default {
                     this.sliderCounter=0
                 }
                 
-            },3 * 1000);
+            },2.5 * 1000);
 
         },
 
@@ -99,7 +99,7 @@ export default {
 
         </section>
         
-        <section id="artist-coaching-1">
+        <section id="artist-coaching">
 
             <div class="container">
                 
@@ -226,7 +226,7 @@ export default {
 
         </section>
 
-        <section id="artist-coaching-2">
+        <section id="course-shop">
 
             <div class="container">
 
@@ -242,17 +242,50 @@ export default {
     
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <CourseCards/>
+                <div class="row flex-wrap row-cols-4 g-3 align-items-start">
+                    <div v-for="(singleCourseCard,i) in store.courseCards" :key="i"  class="col p-3">
+                        <CourseCards :singleCourse="singleCourseCard"/>
                     </div>
                 </div>
 
+                <div class="row justify-content-center">
+
+                    <div class="col-auto py-2">
+    
+                        <a href="#nogo">
+                            View all courses &rightarrow;
+                        </a>
+    
+                    </div>
+
+                </div>
+
+
             </div>
 
+        </section>
+
+        <section id="Blog-section">
             
+            <div class="section-heading text-center my-5">
+                    
+                <h2 class="display-6  ">
+                    Articles and Tips
+                </h2>
 
+                <h3 class="display-6 fw-semibold">
+                    Latest From The Blog                
+                </h3>
+    
+            </div>
 
+            <div class="mx-auto w-50">
+
+                <div class="row">
+                    
+                </div>
+
+            </div>
 
         </section>
 
@@ -374,7 +407,7 @@ h2{
 
 }
     
-#artist-coaching-1{
+#artist-coaching{
         
     .box-container{
 
@@ -458,6 +491,8 @@ h2{
 
                 &.active{
                     opacity: 1;
+                    width: 0.5rem;
+                    height: 0.5rem;
                 }
                 
             }
@@ -467,4 +502,10 @@ h2{
     }
 
 }
+
+#course-shop{
+
+}
+
+
 </style>
