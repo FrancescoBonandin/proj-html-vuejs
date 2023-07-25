@@ -1,20 +1,56 @@
 <script>
+import BoxCards from './BoxCards.vue'
+import CourseCards from './CourseCards.vue'
+import ProfileCard from './ProfileCard.vue'
+import {store} from '../store.js'
+
 export default {
     name: "MainComponent",
+    components:{
+        BoxCards,
+        CourseCards,
+        ProfileCard,
+    },
     data() {
         return {
-
+            store,
+            sliderCounter:0,
+            clock:null
         }
     },
     methods: {
 
+        startSlider(){
+
+            this.clock = setInterval(() => {
+                
+                
+                this.sliderCounter++
+
+                if(this.sliderCounter==this.store.profiles.length){
+                    this.sliderCounter=0
+                }
+                
+            },3 * 1000);
+
+        },
+
+        stopSlider(){
+
+            clearInterval(this.clock)
+            
+        }
+
+    },
+    mounted(){
+        this.startSlider()
     }
 }
 </script>
 
 <template>
     <main>
-        <section class="hero-section">
+        <section id="hero-section">
             
             <div class="my-overlay">
 
@@ -30,19 +66,20 @@ export default {
 
                 </div>
 
-                <div class="central-hero-text text-center ">
+                <div class="central-hero-text text-center row justify-content-center">
 
-                    <div>
+                    <div class="col ">
 
-                        <h2>Hello, i'm Matin</h2>
+                        <h2 class="display-4">Hello, i'm Matin</h2>
     
-                        <div>
-                            <p> Artist coaching and mentoring</p>
-                            <p>might be for you</p>
+                        <div class="">
+                            <h3 class="display-5 fw-semibold"> Artist coaching and mentoring</h3>
+                            <h3 class="display-5 fw-semibold">might be for you</h3>
     
-                            <div class="button">
-                                <a href="#nogo">get started today</a>
-                            </div>
+                        </div>
+                        
+                        <div class="button">
+                            <a href="#nogo">get started today</a>
                         </div>
 
                     </div>
@@ -61,14 +98,176 @@ export default {
             </div>
 
         </section>
-        MAIN
+        
+        <section id="artist-coaching-1">
+
+            <div class="container">
+                
+                <div class="section-heading text-center my-5">
+       
+                    <h2 class="display-6  ">
+                        Artist coaching
+                    </h2>
+        
+                    <h3 class="">
+                        I understand what it takes to create.
+                    </h3>
+        
+                    <h3 class="">
+                        I can help you with
+                    </h3>
+
+                </div>
+
+                <div class="box-container row row-cols-4 flex-wrap justify-content-between align-items-center my-5">
+    
+                    <BoxCards  v-for="(singlecard,i) in store.boxImages" :key="i" :element="singlecard"/>
+
+                </div>
+
+                <div class="mentoring row  justify-content-between my-5">
+
+                    <div class="col-6 left-col text-center">
+               
+    
+                        <h3 class=" px-3 display-5 fw-semibold">
+                            I coach and mentor visual artists, like you, to create like you mean it
+            
+                        </h3>
+
+                        <h2 class='display-6'>
+                            Martin Garrix
+                        </h2>
+                        
+                    </div>
+
+                    <div class="col-6 right-col">
+                        <p class=" fs-5 fw-light">
+                            As a coach and mentor, my ultimate goal is to motivate visual artists toward inspired action.
+                            I help you back on track to being the productive, meaningfuland authenticartist you truly want to be.
+                            I support artists in crafting and living creative lifes as well as feeling god about themselves and their art.
+                            <br>
+                            <br>
+                            As an artist and an educator for nearly 30 years, i understand what it takes to create.
+                        </p>
+
+                        <div class="">
+                            <a href="#nogo">
+                                Get started today
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-auto">
+           
+                        <div class="video-container">
+        
+                            <img class="mx-auto d-block" src="../assets/img/artist-video-poster.jpg" alt="">
+        
+                            <div class="youtube-btn">
+                                
+                                <img src="../assets/img/icon-youtube-play.png"  alt="">
+                                
+                            </div>
+        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <section id="testimonials-section" class="my-5">
+
+            <div class="section-heading text-center my-5">
+                
+                <h2 class="display-6  ">
+                    Testimonials
+                </h2>
+
+                <h3 class="display-6 fw-semibold">
+                    Why do people love me?                
+                </h3>
+
+            </div>
+
+ 
+
+            <div class="my-carousel " @mouseover="stopSlider()" @mouseout="startSlider()" >
+
+                <div  class=" slider d-flex flex-nowrap ">
+
+                    <div v-for="(profilesArr,i) in store.profiles" :key="i" class="card-container " >
+                        
+                        <div v-if="i==sliderCounter" class="row row-cols-3 mx-1 flex-wrap justify-content-around align-items-center g-2">
+                            
+                            <ProfileCard class="px-1"  v-for="(profile,index) in profilesArr" :single-profile="profile" :key="index"/>
+
+                        </div>
+
+                    </div>
+
+                    <div class="indicator-container ">
+
+                        <div v-for="(profilesArr,i) in store.profiles" :key="i" :class=" i == sliderCounter ? 'active':''" class='indicator d-inline-block mx-1 align-middle rounded-circle'>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="artist-coaching-2">
+
+            <div class="container">
+
+                <div class="section-heading text-center my-5">
+                    
+                    <h2 class="display-6  ">
+                        Artist Coaching
+                    </h2>
+    
+                    <h3 class="display-6 fw-semibold">
+                        Latest Online Courses                
+                    </h3>
+    
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <CourseCards/>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+
+
+        </section>
+
     </main>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/main.scss' as *;
 
-.hero-section{
+h2{
+    color: $text-section-title;
+
+}
+
+#hero-section{
     width: 100%;
     min-height: 80vh;
     background-color: #FBF9F6;
@@ -103,6 +302,7 @@ export default {
             width: calc(100% / 3);
             min-height: 80vh;
             position: relative;
+
 
             >*{
                 position: absolute;
@@ -171,5 +371,100 @@ export default {
         }
 
     }
+
+}
+    
+#artist-coaching-1{
+        
+    .box-container{
+
+        width: 100%;
+        min-height:400px;
+
+     
+    }
+    .mentoring{
+        .left-col{
+
+            position: relative;
+
+            &::before{
+                content: "";
+                position:absolute;
+                left: 50%;
+                top: -2rem;
+                transform: translateY(-50%);
+                display: block;
+                width: 50px;
+                height: 50px;
+                
+                background-image: url('../assets/img/artist-quote-icon.png');
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+
+    .video-container{
+        width: 100%;
+        position: relative;
+        
+        img{
+            width: 100%;
+
+        }
+        .youtube-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            filter: grayscale(100%);
+
+            &:hover{
+                filter:grayscale(0%)
+            }
+        }
+    }
+
+
+}
+
+#testimonials-section{
+
+    .my-carousel{
+
+        position: relative;
+        .slider{
+            width: 100%;
+            // overflow-x: hidden;
+            // .card-container{
+            //     min-width: 100%;
+            // }
+
+        }
+
+        .indicator-container{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            bottom:0;
+
+            .indicator{
+                width: 0.3rem;
+                height: 0.3rem;
+                background-color: #000000;
+                opacity: 0.6;
+
+                &.active{
+                    opacity: 1;
+                }
+                
+            }
+        }
+
+        
+    }
+
 }
 </style>

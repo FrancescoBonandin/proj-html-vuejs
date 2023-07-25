@@ -23,7 +23,7 @@ export default {
 
                     <div class="col-auto d-flex flex-grow ">
 
-                        <div class="header-top text ">
+                        <div class="header-top-text ">
             
                             <span>
                                 Starts TOMORROW! Our biggest event of the year... 
@@ -34,7 +34,7 @@ export default {
                             </span>
             
                         </div>
-            
+                        
                         <div class="custom-button mx-2">
             
                             <a href="#nogo">
@@ -51,7 +51,7 @@ export default {
 
         </section>
 
-        <section class="header-main">
+        <section id="header-main">
 
             <div class="container py-3">
 
@@ -104,4 +104,20 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/main.scss' as *;
+
+#header-top{
+    background-color: #FBF9F6;
+
+}
+
+#header-main{
+    .logo-container{
+        height: 2.5rem;
+
+        img{
+            height: 100%;
+        }
+    }
+}
 </style>
