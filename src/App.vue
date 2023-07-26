@@ -2,6 +2,8 @@
 import HeaderComponent from "./components/HeaderComponent.vue";
 import MainComponent from "./components/MainComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 
 export default {
   name: "App",
@@ -9,6 +11,7 @@ export default {
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    FontAwesomeIcon,
   },
   data() {
     return {};
@@ -19,6 +22,72 @@ export default {
 
 <template>
   <div >
+
+    <ul class="nav flex-column nav-tabs  offcanvas-trigger">
+
+      <li class="nav-item">
+
+        <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
+          <FontAwesomeIcon icon="fa-solid fa-ruler-combined"/>
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
+          <FontAwesomeIcon icon="fa-regular fa-life-ring"/>
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
+          <FontAwesomeIcon icon="fa-solid fa-book"/>
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
+          <FontAwesomeIcon icon="fa-solid fa-cart-shopping"/>
+        </a>
+
+      </li>
+
+    </ul>
+
+    <a class="" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
+     
+    </a>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      
+      <div class="offcanvas-header">
+
+          <h5 class="offcanvas-title" id="offcanvasLabel">
+            Offcanvas
+          </h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+
+          </button>
+
+      </div>
+
+        <div class="offcanvas-body">
+
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quas in dolorem velit reprehenderit odit alias nisi minus esse, 
+            perferendis labore dignissimos pariatur ratione magni.
+            Maiores maxime perspiciatis perferendis veniam saepe!
+          </div>
+          
+        </div>
+    </div>
     
     <HeaderComponent />
   
@@ -44,12 +113,18 @@ export default {
           color: inherit;
           text-decoration: inherit;
         }
+        &:hover{
+          color: $button-primary;
+        }
       }
   
       ul{
         padding: 0;
       }
+
     }
+
+
   }
 
   body{
@@ -67,5 +142,28 @@ export default {
 
   img{
     display: block;
+  }
+
+  .offcanvas-trigger{
+    position: fixed;
+    top: 200px;
+    right: 0;
+    z-index:1;
+    border: solid 1px grey;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: whitesmoke;
+    a{
+      color: black;
+      text-decoration: none;
+
+    }
+
+    ul{
+      padding: 0;
+      li{
+        border: 1px solid black;
+      }
+    }
   }
 </style>

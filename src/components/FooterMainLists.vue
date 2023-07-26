@@ -97,8 +97,13 @@ h4{
 .col,.col-auto{
 
     ul{
+        
         li,a{
             color: grey;
+        }
+
+        a:hover{
+            color: $button-primary;
         }
     }
 }

@@ -527,6 +527,7 @@ h2{
     .my-carousel{
 
         position: relative;
+        min-height: 300px;
         .slider{
             width: 100%;
             // overflow-x: hidden;
