@@ -92,7 +92,7 @@ export default {
 
 h4{
     span{
-        color:$button-primary ;
+        color:$color-primary ;
     }
 }
 .col,.col-auto{
@@ -104,7 +104,7 @@ h4{
         }
 
         a:hover{
-            color: $button-primary;
+            color: $color-primary;
         }
     }
 }

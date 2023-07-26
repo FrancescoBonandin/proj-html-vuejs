@@ -46,7 +46,7 @@ export default {
         
     }
     &.primary{
-        background-color:$button-primary;
+        background-color:$color-primary;
         transition:all ease-in-out 0.3s;
 
         a.btn-text{
@@ -55,21 +55,21 @@ export default {
         }
 
         &:hover{
-            background-color:$text-section-title;
+            background-color:$color-secondary;
         }
     }
     
     &.secondary{
-        background-color:rgba( $button-primary, 0.2);
+        background-color:rgba( $color-primary, 0.2);
         transition:all ease-in-out 0.3s;
         
         a.btn-text{
-            color: $button-primary;
+            color: $color-primary;
   
         }
 
         &:hover{
-            background-color:$button-primary;
+            background-color:$color-primary;
             a.btn-text{
             color:white;
   
@@ -78,7 +78,7 @@ export default {
     }
     &.round{
         border-radius: 50%;
-        background-color:$button-primary;
+        background-color:$color-primary;
         opacity: 1;
         transition:all ease-in-out 0.3s;
         width: 50px;
@@ -93,7 +93,7 @@ export default {
         }
 
         &:hover{
-            background-color:$text-section-title;
+            background-color:$color-secondary;
         }
     }
 

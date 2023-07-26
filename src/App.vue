@@ -110,7 +110,7 @@ export default {
           text-decoration: inherit;
         }
         &:hover{
-          color: $button-primary;
+          color: $color-primary;
         }
       }
   

@@ -355,7 +355,7 @@ export default {
 @use '../assets/scss/main.scss' as *;
 
 h2{
-    color: $text-section-title;
+    color: $color-secondary;
 
 }
 
@@ -576,7 +576,7 @@ h2{
 
 #blog-section{
 
-    background-color: rgba($text-section-title, $alpha: 0.1);
+    background-color: rgba($color-secondary, $alpha: 0.1);
     background-image: url('../assets/img/shapes/maxcoach-shape-03.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -587,7 +587,7 @@ h2{
 
     a.special-link{
         display: block;
-        color: $button-primary;
+        color: $color-primary;
         border-bottom: 1px solid rgba($color: #333, $alpha: 0.4);
 
     }

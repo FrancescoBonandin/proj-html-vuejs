@@ -126,7 +126,7 @@ export default {
                 
             }
             .price{
-                color: $button-primary;
+                color: $color-primary;
             }
             
         }
@@ -155,7 +155,7 @@ export default {
             
             top: 50%;
             left: 0;
-            border: 1px solid $button-primary;
+            border: 1px solid $color-primary;
         }
     }
 }
