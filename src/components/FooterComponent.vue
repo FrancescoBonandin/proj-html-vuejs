@@ -80,7 +80,7 @@ export default {
 
                             &copy;2020 MaxCoach.All Rights Reserved
 
-                            <MyButton class="fixed-btn" :text="'&uparrow;'" :btnclass="'round'" :anchor="'#ancora'"/>
+                            <MyButton class="fixed-btn" :text="'&uparrow;'" :btnclass="'round'" :anchor="'#to-the-top'"/>
 
                         </small>
 

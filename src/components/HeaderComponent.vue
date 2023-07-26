@@ -55,7 +55,7 @@ export default {
 
 <template>
 
-    <header id="ancora">
+    <header id="to-the-top">
         <section id="header-top ">
 
             <div class="container mt-2">
