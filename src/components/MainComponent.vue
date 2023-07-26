@@ -232,7 +232,7 @@ export default {
 
                     <div class="indicator-container ">
 
-                        <div v-for="(profilesArr,i) in store.profiles" :key="i" :class=" i == sliderCounter ? 'active':''" class='indicator d-inline-block mx-1 align-middle rounded-circle'>
+                        <div @click="()=>{sliderCounter=i}" v-for="(profilesArr,i) in store.profiles" :key="i" :class=" i == sliderCounter ? 'active':''" class='indicator d-inline-block mx-1 align-middle rounded-circle'>
                         </div>
 
                     </div>
@@ -523,7 +523,7 @@ h2{
 }
 
 #testimonials-section{
-
+    background-color: $page-background;
     .my-carousel{
 
         position: relative;
@@ -543,15 +543,16 @@ h2{
             bottom:0;
 
             .indicator{
-                width: 0.3rem;
-                height: 0.3rem;
+                width: 0.5rem;
+                height: 0.5rem;
                 background-color: #000000;
                 opacity: 0.6;
+                cursor: pointer;
 
                 &.active{
                     opacity: 1;
-                    width: 0.5rem;
-                    height: 0.5rem;
+                    width: 0.8rem;
+                    height: 0.8rem;
                 }
                 
             }
@@ -567,6 +568,11 @@ h2{
 // }
 
 #blog-section{
+
+    background-color: rgba($text-section-title, $alpha: 0.1);
+    background-image: url('../assets/img/shapes/maxcoach-shape-03.png');
+    background-repeat: no-repeat;
+    background-position: center;
     .blogs{
         width: 100%;
         min-height: 700px;

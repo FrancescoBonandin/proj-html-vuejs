@@ -23,11 +23,11 @@ export default {
 
     <div class="col card border-0 rounded-0">
 
-        <h5 class="card-title">
+        <h5 class="card-title px-3">
             {{ singleProfile.title }}
         </h5>
 
-        <div class="card-body">
+        <div class="card-body m-2">
 
             <div class="card-text">
                 {{ singleProfile.text }}
@@ -67,29 +67,35 @@ export default {
     transform: scale(0.8);
     filter: opacity(0.6);
     transition: all ease-in-out 0.5s;
-
+    
     &:hover{
         transform: scale(1);
         filter: opacity(1);
     }
-    .card-info{
+    .card-body{
 
-        .img-container{
-            width: 20%;
-            overflow: hidden;
-            img{
-                width: 100%;
-                object-fit: cover;
+        
+
+        .card-info{
+    
+            .img-container{
+                width: 20%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+    
             }
-
+    
+            .info{
+                .role{
+                    font-size: 0.8em;
+                    color:gray;
+                }
+            }
         }
 
-        .info{
-            .role{
-                font-size: 0.8em;
-                color:gray;
-            }
-        }
     }
 }
 </style>
