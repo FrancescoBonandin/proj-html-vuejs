@@ -47,7 +47,7 @@ export default {
     
                         <div>
                             
-                            <font-awesome-icon  icon="fa-regular fa-calendar "/>
+                            <FontAwesomeIcon  icon="fa-regular fa-calendar " size="lg"/>
     
                         </div>
     
@@ -62,7 +62,7 @@ export default {
     
                         <div>
     
-                            <font-awesome-icon  icon="fa-regular fa-eye "/>
+                            <FontAwesomeIcon  icon="fa-regular fa-eye " size="lg"/>
     
                         </div>
     

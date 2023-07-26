@@ -51,7 +51,7 @@ export default {
     
                         <div>
                             
-                            <font-awesome-icon  icon="fa-regular fa-file-lines "/>
+                            <FontAwesomeIcon  icon="fa-regular fa-file-lines " size="lg"/>
     
                         </div>
     
@@ -66,7 +66,7 @@ export default {
     
                         <div>
     
-                            <font-awesome-icon  icon="fa-regular fa-user "/>
+                            <FontAwesomeIcon  icon="fa-regular fa-user " size="lg"/>
     
                         </div>
     

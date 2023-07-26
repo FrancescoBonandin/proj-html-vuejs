@@ -71,7 +71,7 @@ export default {
                             </small>
                             
                             <span>
-                                <FontAwesomeIcon icon="fa-regular fa-clock "/>
+                                <FontAwesomeIcon icon="fa-regular fa-clock " size="lg"/>
                             </span>
 
                             <span class="mx-2">
@@ -132,7 +132,7 @@ export default {
                             <div class="col" v-for="(singleLink,i) in store.socialLinks" :key="i">
 
                                 <a :href="singleLink.link">
-                                    <FontAwesomeIcon :icon="singleLink.social"/>
+                                    <FontAwesomeIcon :icon="singleLink.social" size="lg"/>
                                 </a>
                             
                             </div>

@@ -28,7 +28,7 @@ export default {
       <li class="nav-item">
 
         <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
-          <FontAwesomeIcon icon="fa-solid fa-ruler-combined"/>
+          <FontAwesomeIcon icon="fa-solid fa-ruler-combined" size="lg"/>
         </a>
 
       </li>
@@ -36,7 +36,7 @@ export default {
       <li class="nav-item">
 
         <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
-          <FontAwesomeIcon icon="fa-regular fa-life-ring"/>
+          <FontAwesomeIcon icon="fa-regular fa-life-ring" size="lg"/>
         </a>
 
       </li>
@@ -44,7 +44,7 @@ export default {
       <li class="nav-item">
 
         <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
-          <FontAwesomeIcon icon="fa-solid fa-book"/>
+          <FontAwesomeIcon icon="fa-solid fa-book" size="lg"/>
         </a>
 
       </li>
@@ -52,7 +52,7 @@ export default {
       <li class="nav-item">
 
         <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
-          <FontAwesomeIcon icon="fa-solid fa-cart-shopping"/>
+          <FontAwesomeIcon icon="fa-solid fa-cart-shopping" size="lg"/>
         </a>
 
       </li>

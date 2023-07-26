@@ -48,15 +48,16 @@ export default {
             {{ singleList.listItems.supportMail }}
         </li>
 
-        <li class="row row-cols-4 ">
+        <li class="row row-cols-4 my-3">
 
             <div v-for="singleLink in singleList.listItems.links" class="col-auto">
 
                 <a :href="singleLink.link">
-                    <FontAwesomeIcon :icon="singleLink.social"/>
+                    <FontAwesomeIcon :icon="singleLink.social" size="lg"/>
                 </a>
 
             </div>
+
         </li>
     </ul>
 

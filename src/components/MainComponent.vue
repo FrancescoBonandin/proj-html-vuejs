@@ -200,7 +200,7 @@ export default {
             
         </section>
 
-        <section id="testimonials-section" class="my-5">
+        <section id="testimonials-section" class="my-3">
 
             <div class="section-heading text-center my-5">
                 
@@ -473,11 +473,9 @@ h2{
         width: 100%;
         min-height:400px;
 
-     
     }
     .mentoring{
         .left-col{
-
             position: relative;
 
             &::before{
@@ -489,7 +487,6 @@ h2{
                 display: block;
                 width: 50px;
                 height: 50px;
-                
                 background-image: url('../assets/img/artist-quote-icon.png');
                 background-repeat: no-repeat;
             }
@@ -523,6 +520,15 @@ h2{
 }
 
 #testimonials-section{
+    &::before{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-image: url('../assets/img/wave.svg');
+        filter: invert(100%);
+        transform: rotate(180deg);
+    }
     background-color: $page-background;
     .my-carousel{
 

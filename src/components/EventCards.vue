@@ -50,7 +50,7 @@ export default {
 
                         <span>
 
-                            <FontAwesomeIcon class="mx-1" icon=" fa-solid fa-location-dot"/>
+                            <FontAwesomeIcon class="mx-1" icon=" fa-solid fa-location-dot" size="lg"/>
 
                         </span>
 
