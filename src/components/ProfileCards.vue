@@ -62,6 +62,7 @@ export default {
 <style lang="scss" scoped>
 
 .card{
+    cursor:pointer;
     max-width: calc(100% / 3.5);
     background-color: white;
     transform: scale(0.8);
