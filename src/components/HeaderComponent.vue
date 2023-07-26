@@ -154,6 +154,7 @@ export default {
 @use '../assets/scss/main.scss' as *;
 
 #header-top{
+    padding-top: 10px;
     background-color: #FBF9F6;
 
 }

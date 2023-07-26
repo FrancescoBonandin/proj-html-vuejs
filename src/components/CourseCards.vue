@@ -58,6 +58,7 @@ export default {
                         <small>
     
                             {{ singleCourse.lessons }} lessons
+
                         </small>
     
                     </div>
@@ -83,7 +84,6 @@ export default {
             </div>
 
 
-    
         </div>
     
     </div>
@@ -111,9 +111,7 @@ export default {
             top:60%;
             left: 0%;
             border: 1px solid transparent;
-            
             transition: all ease-in-out 0.5s;
-
         }
 
         .card-text{
@@ -122,8 +120,6 @@ export default {
             padding:5px;
             h4{
                 font-size: 1.3rem;
-                
-                
             }
             .price{
                 color: $color-primary;
@@ -152,7 +148,7 @@ export default {
     &:hover{
         .content-container{
             position: absolute;
-            
+            width: 90%;
             top: 50%;
             left: 0;
             border: 1px solid $color-primary;

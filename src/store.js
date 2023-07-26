@@ -202,7 +202,7 @@ export const store= reactive({
                 title:"It's a choice of quality for people with special needs",
                 text:`I'm a very strict person so i require everything to be organized and neat.
                     Then, i'll be able to make things right and shine. MaxCoach guys just got me`,
-                role:"Multimedia admin"
+                role:"Multimedia Admin"
 
             },
             {   image:"../assets/img/avatars/artist-testimonial-avatar-03.jpg",
@@ -218,7 +218,7 @@ export const store= reactive({
                 title:"Professional Team of specialists and passionate mentors at reach",
                 text:`I need to get a certification for English proficiency and Max Coach is my best choice.
                     Their tutors are smart and professionals when dealing with student`,
-                role:"Multimedia admin"
+                role:"IT Specialist"
 
             },
         ],   
@@ -228,7 +228,7 @@ export const store= reactive({
                 title:"Professional Team of specialists and passionate mentors at reach",
                 text:`I need to get a certification for English proficiency and Max Coach is my best choice.
                     Their tutors are smart and professionals when dealing with student`,
-                role:"Multimedia admin"
+                role:"IT Specialist"
 
             },
             {   image:"../assets/img/avatars/artist-testimonial-avatar-02.jpg",
@@ -236,7 +236,7 @@ export const store= reactive({
                 title:"It's a choice of quality for people with special needs",
                 text:`I'm a very strict person so i require everything to be organized and neat.
                     Then, i'll be able to make things right and shine. MaxCoach guys just got me`,
-                role:"Multimedia admin"
+                role:"Multimedia Admin"
 
             },
             {   image:"../assets/img/avatars/artist-testimonial-avatar-03.jpg",
@@ -262,7 +262,7 @@ export const store= reactive({
                 title:"It's a choice of quality for people with special needs",
                 text:`I'm a very strict person so i require everything to be organized and neat.
                     Then, i'll be able to make things right and shine. MaxCoach guys just got me`,
-                role:"Multimedia admin"
+                role:"Multimedia Admin"
 
             },
             {   image:"../assets/img/avatars/artist-testimonial-avatar-04.jpg",
@@ -270,7 +270,7 @@ export const store= reactive({
                 title:"Professional Team of specialists and passionate mentors at reach",
                 text:`I need to get a certification for English proficiency and Max Coach is my best choice.
                     Their tutors are smart and professionals when dealing with student`,
-                role:"Multimedia admin"
+                role:"IT Specialist"
 
             },
         ], 
