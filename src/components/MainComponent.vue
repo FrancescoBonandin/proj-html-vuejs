@@ -1,4 +1,5 @@
 <script>
+import MyButton from './MyButton.vue'
 import BoxCards from './BoxCards.vue'
 import CourseCards from './CourseCards.vue'
 import ProfileCards from './ProfileCards.vue'
@@ -9,6 +10,7 @@ import {store} from '../store.js'
 export default {
     name: "MainComponent",
     components:{
+        MyButton,
         BoxCards,
         CourseCards,
         ProfileCards,
@@ -81,10 +83,17 @@ export default {
                             <h3 class="display-5 fw-semibold">might be for you</h3>
     
                         </div>
-                        
-                        <div class="button">
-                            <a href="#nogo">get started today</a>
+
+                        <div class="row justify-content-center mt-5">
+
+                            <div class="col-auto">
+    
+                                <MyButton :text="'Get started today'" :btnclass="'primary'"/>
+    
+                            </div>
+
                         </div>
+                        
 
                     </div>
 
@@ -155,10 +164,14 @@ export default {
                             As an artist and an educator for nearly 30 years, i understand what it takes to create.
                         </p>
 
-                        <div class="">
-                            <a href="#nogo">
-                                Get started today
-                            </a>
+                        <div class="row">
+
+                            <div class="col-auto">
+                                
+                                <MyButton :text="'Get started today'" :btnclass="'secondary'"/>
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -255,11 +268,9 @@ export default {
                 <div class="row justify-content-center">
 
                     <div class="col-auto py-2">
-    
-                        <a href="#nogo">
-                            View all courses &rightarrow;
-                        </a>
-    
+
+                        <MyButton :text="'View all courses &rightarrow;'" :btnclass="'secondary'"/>
+
                     </div>
 
                 </div>
@@ -293,13 +304,20 @@ export default {
 
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center g-1 py-1">
 
-                <div class="col-auto py-1">
+                <div class="col-auto ">
+
                     Get into Details now?
-                    <a href="#nogo">
+
+                </div>
+
+                <div class="col-auto">
+              
+                    <a class="special-link" href="#nogo">
                         View all posts &rightarrow;
                     </a>
+
                 </div>
 
             </div>
@@ -552,6 +570,13 @@ h2{
     .blogs{
         width: 100%;
         min-height: 700px;
+    }
+
+    a.special-link{
+        display: block;
+        color: $button-primary;
+        border-bottom: 1px solid rgba($color: #333, $alpha: 0.4);
+
     }
 }
 

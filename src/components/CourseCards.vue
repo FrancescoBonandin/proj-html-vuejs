@@ -105,7 +105,7 @@ export default {
     .card-body{
         min-height:210px;
         .content-container{
-            
+            width: 100%;
             background-color: white;
             position: relative;
             top:60%;
@@ -117,8 +117,9 @@ export default {
         }
 
         .card-text{
-            min-height: 150px;
-            max-height: 200px;
+            min-height: 100px;
+            max-height: 150px;
+            padding:5px;
             h4{
                 font-size: 1.3rem;
                 
@@ -133,9 +134,10 @@ export default {
         
         .info{
             .col{
-
+            
                 >*{
                     display: inline-block;
+                    padding: 5px;
                 }
 
                 small{
@@ -150,6 +152,7 @@ export default {
     &:hover{
         .content-container{
             position: absolute;
+            
             top: 50%;
             left: 0;
             border: 1px solid $button-primary;

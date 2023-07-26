@@ -1,46 +1,89 @@
 <script>
+import MyButton from './MyButton.vue';
+import HeaderDropdowns from './HeaderDropdowns.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import {store} from '../store.js'
+
+
 export default {
+    components: { 
+        FontAwesomeIcon,
+        MyButton,
+        HeaderDropdowns,
+     },
     name: "HeaderComponent",
     data() {
         return {
-
-        }
+            store,
+            countdownClock: null,
+            countdownCounter: null,
+            
+        };
     },
     methods: {
+        addZeroBefore(num) {
+            if (num < 10) {
+                num = `0${num}`;
+            }
+            return num;
+        },
+        setCountdown() {
+            this.countdownClock = setInterval(() => {
+                let now = new Date();
+                let tomorrowCountdown = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+                let timeleft = tomorrowCountdown.getTime() - now.getTime();
+                let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+                    clearInterval(this.countdownClock);
+                    this.countdownCounter = "Time's Up";
+                }
+                else {
+                    this.countdownCounter = `${this.addZeroBefore(days)}:${this.addZeroBefore(hours)}:${this.addZeroBefore(minutes)}:${this.addZeroBefore(seconds)}`;
+                }
+            }, 1000);
+        }
+    },
+    created() {
+        this.setCountdown();
+    },
 
-    }
 }
 </script>
 
 <template>
 
-    <header>
-        <section id="header-top">
+    <header id="ancora">
+        <section id="header-top ">
 
-            <div class="container">
+            <div class="container mt-2">
 
-                <div class="row justify-content-center align-items-start">
+                <div class="row justify-content-center align-items-center">
 
-                    <div class="col-auto d-flex flex-grow ">
+                    <div class="col-auto d-flex flex-grow align-items-center ">
 
-                        <div class="header-top-text ">
+                        <div  class="header-top-text ">
             
-                            <span>
+                            <small>
                                 Starts TOMORROW! Our biggest event of the year... 
+                            </small>
+                            
+                            <span>
+                                <FontAwesomeIcon icon="fa-regular fa-clock "/>
                             </span>
-                
+
                             <span class="mx-2">
-                                clock icon/ Days/Hours/Min/Seconds
+                                {{ countdownCounter }}
                             </span>
             
                         </div>
                         
-                        <div class="custom-button mx-2">
-            
-                            <a href="#nogo">
-                                get ticket
-                            </a>
-            
+                        <div class=" mx-2">
+                            
+                            <MyButton :text="'Get Ticket'" :btnclass="'primary'"/>
+                            
                         </div>
 
                     </div>
@@ -58,19 +101,24 @@ export default {
                 <div class="row row-cols-3 justify-content-between align-items-center">
 
                     <div class="col-auto">
-                        
-                        <div class="logo-container">
-                            <img src="../assets/img/dark-logo.png" alt="">
+
+                        <div class="row align-items-center">
+
+                            <div class="logo-container ">
+                                <img src="../assets/img/dark-logo.png" class="img-fluid" alt="">
+                            </div>
+
                         </div>
+                        
 
                     </div>
 
                     <div class="col-auto">
 
-                        <ul class="row justify-content-between align-items-center">
+                        <ul class="row row-cols-6 justify-content-between align-items-center my-0 ">
     
-                            <li class="col-auto" v-for="x in 6">
-                                text &DownArrow;
+                            <li class="col-auto" v-for="(singleDropdown,i) in store.headerDropdowns" :key="i">
+                               <HeaderDropdowns :dropdown="singleDropdown" :index="i"/>
                             </li>
     
                         </ul>
@@ -81,13 +129,12 @@ export default {
 
                         <div class="row align-items-center ">
 
-                            <div class="col">
+                            <div class="col" v-for="(singleLink,i) in store.socialLinks" :key="i">
 
-                                tweet
-                                FB 
-                                IG 
-                                LNKDN
-                                
+                                <a :href="singleLink.link">
+                                    <FontAwesomeIcon :icon="singleLink.social"/>
+                                </a>
+                            
                             </div>
 
                         </div>
@@ -113,11 +160,15 @@ export default {
 
 #header-main{
     .logo-container{
-        height: 2.5rem;
+        height: 2rem;
 
         img{
             height: 100%;
         }
+    }
+
+    *{
+        max-height: 100%;
     }
 }
 </style>

@@ -1,9 +1,10 @@
 <script>
 import FooterMainLists from './FooterMainLists.vue';
+import MyButton from './MyButton.vue';
 import {store} from '../store.js'
 
 export default {
-    components:{FooterMainLists},
+    components:{ FooterMainLists, MyButton },
     name: "FooterComponent",
     data() {
         return {
@@ -18,7 +19,7 @@ export default {
 
 <template>
     <footer>
-        
+
         <section id="footer-top">
 
             <div class="container my-4">
@@ -78,6 +79,8 @@ export default {
                         <small>
 
                             &copy;2020 MaxCoach.All Rights Reserved
+
+                            <MyButton class="fixed-btn" :text="'&uparrow;'" :btnclass="'round'" :anchor="'#ancora'"/>
 
                         </small>
 
@@ -158,6 +161,14 @@ export default {
         margin-top: 3rem;
         padding: 0.5rem;
         color: grey;
+    }
+
+    .fixed-btn{
+        position: fixed;
+        z-index: 1;
+        bottom: 20px;
+        right: 20px;
+        transform: translate(-50%,-50%);
     }
 }
 
