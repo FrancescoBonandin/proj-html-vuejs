@@ -101,7 +101,7 @@ export default {
     &:nth-child(odd){
         flex-grow: 1;
         .card{
-                
+                cursor: pointer; 
             .card-img-top{
                 width: 100%;
                 margin: 0 auto;
@@ -140,6 +140,7 @@ export default {
     &:nth-child(2){
         flex-grow: 1.8;
         .card{
+            cursor: pointer; 
             align-self: center;
             position: relative;
             .card-body{

@@ -28,55 +28,61 @@ export default {
             <img :src="getImagePath(singleCourse.image)" class="img-fluid" alt="">
         </div>
         
-        <div class="card-body p-3 align-items-start">
+        <div class="card-body p-2 align-items-start">
 
-            <div class="card-text">
+            <div class="content-container">
 
-                <h4 class="price">
-                    ${{singleCourse.price}}
-                </h4>
-        
-                <h4>
-                    {{ singleCourse.courseName }}
-                </h4>
-
-            </div>
+                <div class="card-text">
     
-
-            <div class="info row flex-wrap align-items-center">
-
-                <div class="col">
-
-                    <div>
-                        
-                        <font-awesome-icon  icon="fa-regular fa-file-lines "/>
-
-                    </div>
-
-                    <small>
-
-                        {{ singleCourse.lessons }} lessons
-                    </small>
-
+                    <h4 class="price">
+                        ${{singleCourse.price}}
+                    </h4>
+            
+                    <h4>
+                        {{ singleCourse.courseName }}
+                    </h4>
+    
                 </div>
-
-                <div class="col">
-
-                    <div>
-
-                        <font-awesome-icon  icon="fa-regular fa-user "/>
-
+        
+    
+                <div class="info row flex-wrap align-items-center">
+    
+                    <div class="col">
+    
+                        <div>
+                            
+                            <font-awesome-icon  icon="fa-regular fa-file-lines "/>
+    
+                        </div>
+    
+                        <small>
+    
+                            {{ singleCourse.lessons }} lessons
+                        </small>
+    
                     </div>
-
-                    <small>
-
-                        {{ singleCourse.students }} students
-
-                    </small>
+    
+                    <div class="col">
+    
+                        <div>
+    
+                            <font-awesome-icon  icon="fa-regular fa-user "/>
+    
+                        </div>
+    
+                        <small>
+    
+                            {{ singleCourse.students }} students
+    
+                        </small>
+    
+                    </div>
 
                 </div>
 
             </div>
+
+
     
         </div>
     
@@ -97,14 +103,18 @@ export default {
     }
     
     .card-body{
-        
-        background-color: white;
-        position: relative;
-        top:100%;
-        left: 0%;
-        border: 1px solid transparent;
-        
-        transition: all ease-in-out 0.5s;
+        min-height:210px;
+        .content-container{
+            
+            background-color: white;
+            position: relative;
+            top:60%;
+            left: 0%;
+            border: 1px solid transparent;
+            
+            transition: all ease-in-out 0.5s;
+
+        }
 
         .card-text{
             min-height: 150px;
@@ -138,10 +148,9 @@ export default {
     }
 
     &:hover{
-        height: 80%;
-        .card-body{
+        .content-container{
             position: absolute;
-            top: 80%;
+            top: 50%;
             left: 0;
             border: 1px solid $button-primary;
         }

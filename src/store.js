@@ -198,28 +198,123 @@ export const store= reactive({
     ],
     events:[
         {
-            image:'../assets/img/events/artist-event-04-250x300.jpg',
+            image:'../assets/img/page-events/artist-event-04-250x300.jpg',
             date:'Nov 22, 2020',
             title:'Storytelling Workshop',
             location:'Texas,US'
         },
         {
-            image:'../assets/img/events/artist-event-03-250x300.jpg',
+            image:'../assets/img/page-events/artist-event-03-250x300.jpg',
             date:'Oct 10, 2020',
             title:'Painting Art Contest 2020',
             location:'New York,US'
         },
         {
-            image:'../assets/img/events/artist-event-02-250x300.jpg',
+            image:'../assets/img/page-events/artist-event-02-250x300.jpg',
             date:'Nov 23, 2020',
             title:'International Art Fair 2020',
             location:'Hamburg,Germany'
         },
         {
-            image:'../assets/img/events/artist-event-01-250x300.jpg',
+            image:'../assets/img/page-events/artist-event-01-250x300.jpg',
             date:'Dec 15, 2020',
             title:'Street Performance: Call For Artist',
             location:'Illinois,US'
+        },
+    ],
+    footerInfo:[
+        {name:'Address',
+         listItems:{
+            address:'382 NE 191st ST # 87394 Miami, Fl 33179-3899',
+            phone:'+1 (305) 547-9909 ',
+            callHours:'9am-5pm EST, Monday-Friday)',
+            supportMail:'support@maxCoach.com',
+            links:[
+                {
+                    social:'fa-brands fa-facebook',
+                    link:'www.facebook.it'
+                },
+                {
+                    social:'fa-brands fa-twitter',
+                    link:'www.twitter.it'
+                },
+                {
+                    social:'fa-brands fa-instagram',
+                    link:'www.instagram.it'
+                },
+                {
+                    social:'fa-brands fa-linkedin',
+                    link:'www.linkedin.it'
+                },
+            ]
+
+         }
+        },
+        {name:'Explore',
+         listItems:[
+            {
+                name:'Start Here',
+                link:'#nogo'
+            },
+            {
+                name:'Success Story',
+                link:'#nogo'
+            },
+            {
+                name:'Blog',
+                link:'#nogo'
+            },
+            {
+                name:'Courses',
+                link:'#nogo'
+            },
+            {
+                name:'Contact Us',
+                link:'#nogo'
+            },
+         ]
+           
+        },
+        {name:'Information',
+         listItems:[
+            {
+                name:'Membership',
+                link:'#nogo'
+            },
+            {
+                name:'Purchase Guide',
+                link:'#nogo'
+            },
+            {
+                name:'Privacy Policy',
+                link:'#nogo'
+            },
+            {
+                name:'Terms of Service',
+                link:'#nogo'
+            },
+        
+         ]
+           
+        },
+        {name:'Instagram',
+         at:'@maxcoach',
+         listItems:[
+            {
+                image:'../Assets/img/120084500_197897808368764_8114555493043279565_n.jpg',
+                link:'#nogo'
+            },
+            {
+                image:'../Assets/img/120012142_177596140500760_8623485824101406058_n.jpg',
+                link:'#nogo'
+            },
+            {
+                image:'../Assets/img/120099363_364334431619755_7198812647386067017_n.jpg',
+                link:'#nogo'
+            },
+        
+         ]
+           
         },
     ]
 

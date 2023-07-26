@@ -77,25 +77,25 @@ export default {
 .card{
 
     .row{
-        .col.img-container{
+        .col{
 
-            img{
-                display: block;
-                margin: 0 auto;
+            &.img-container{
+    
+                img{
+                    display: block;
+                    margin: 0 auto;
+                }
+    
+                
             }
-
-            .col.card-body{
+            &.card-body{
                 min-width: 250px;
 
-                div:last-child{
-                    color: gray;
-                    small{
-                        color: inherit;
-                    }
+                div:last-child,h5:first-child{
+                  color: grey;
                 }
 
             }
-
         }
 
     }

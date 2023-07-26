@@ -35,6 +35,26 @@ export default {
 
   *{
     font-family: 'Roboto', sans-serif;
+    .col,.col-auto{
+
+      a{
+        color: black;
+        text-decoration: none;
+        &:visited{
+          color: inherit;
+          text-decoration: inherit;
+        }
+      }
+  
+      ul{
+        padding: 0;
+      }
+    }
+  }
+
+  body{
+    max-width: calc(100vw - 15px);
+    overflow-x: hidden;
   }
 
   h2{

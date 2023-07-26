@@ -2,7 +2,7 @@
 import BoxCards from './BoxCards.vue'
 import CourseCards from './CourseCards.vue'
 import ProfileCards from './ProfileCards.vue'
-import BlogCards from './blogCards.vue'
+import BlogCards from './BlogCards.vue'
 import EventCards from './EventCards.vue'
 import {store} from '../store.js'
 
@@ -209,7 +209,7 @@ export default {
 
                     <div v-for="(profilesArr,i) in store.profiles" :key="i" class="card-container " >
                         
-                        <div v-if="i==sliderCounter" class="row row-cols-3 mx-1 flex-wrap justify-content-around align-items-center g-2">
+                        <div v-if="i==sliderCounter" class="row row-cols-3 mx-0 flex-wrap justify-content-around align-items-center g-2">
                             
                             <ProfileCards class="px-1"  v-for="(profile,index) in profilesArr" :single-profile="profile" :key="index"/>
 
@@ -423,7 +423,7 @@ h2{
             &.right{
                 right: 0;
                 top:0;
-
+                overflow-x: hidden;
                 .artist-shape-zero-four{
                     bottom: 49%;
                     left:59%;
@@ -544,9 +544,9 @@ h2{
 
 }
 
-#course-shop{
+// #course-shop{
 
-}
+// }
 
 #blog-section{
     .blogs{
