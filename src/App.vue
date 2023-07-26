@@ -59,10 +59,6 @@ export default {
 
     </ul>
 
-    <a class="" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvasExample">
-     
-    </a>
-
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
       
       <div class="offcanvas-header">
@@ -146,7 +142,7 @@ export default {
 
   .offcanvas-trigger{
     position: fixed;
-    top: 200px;
+    top: 100px;
     right: 0;
     z-index:1;
     border: solid 1px grey;
@@ -156,7 +152,6 @@ export default {
     a{
       color: black;
       text-decoration: none;
-
     }
 
     ul{
