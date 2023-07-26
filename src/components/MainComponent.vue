@@ -1,7 +1,9 @@
 <script>
 import BoxCards from './BoxCards.vue'
 import CourseCards from './CourseCards.vue'
-import ProfileCard from './ProfileCard.vue'
+import ProfileCards from './ProfileCards.vue'
+import BlogCards from './blogCards.vue'
+import EventCards from './EventCards.vue'
 import {store} from '../store.js'
 
 export default {
@@ -9,7 +11,9 @@ export default {
     components:{
         BoxCards,
         CourseCards,
-        ProfileCard,
+        ProfileCards,
+        BlogCards,
+        EventCards,
     },
     data() {
         return {
@@ -207,7 +211,7 @@ export default {
                         
                         <div v-if="i==sliderCounter" class="row row-cols-3 mx-1 flex-wrap justify-content-around align-items-center g-2">
                             
-                            <ProfileCard class="px-1"  v-for="(profile,index) in profilesArr" :single-profile="profile" :key="index"/>
+                            <ProfileCards class="px-1"  v-for="(profile,index) in profilesArr" :single-profile="profile" :key="index"/>
 
                         </div>
 
@@ -265,7 +269,7 @@ export default {
 
         </section>
 
-        <section id="Blog-section">
+        <section id="blog-section">
             
             <div class="section-heading text-center my-5">
                     
@@ -279,10 +283,47 @@ export default {
     
             </div>
 
-            <div class="mx-auto w-50">
+            <div class="container my-4">
 
-                <div class="row">
+                <div class=" blogs row flex-wrap justify-content-around align-items-center gx-5">
+
+                    <BlogCards v-for="(singleBlogPost,i) in store.blogPost" :key="i" :index='i' :singlePost="singleBlogPost"/>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-auto py-1">
+                    Get into Details now?
+                    <a href="#nogo">
+                        View all posts &rightarrow;
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="events-section">
+            
+            <div class="section-heading text-center my-5">
                     
+                <h2 class="display-6  ">
+                    Upcoming Events
+                </h2>
+
+                <h3 class="display-6 fw-semibold">
+                    Let's Work Together
+                </h3>
+    
+            </div>
+
+            <div class="container">
+
+                <div class="row row-cols-2 flex-wrap justify-content-between align-items-center">
+                    <EventCards v-for="(singleEvent,i) in store.events" :key="i" :index="i" :singleSocialEvent="singleEvent" />
                 </div>
 
             </div>
@@ -505,6 +546,13 @@ h2{
 
 #course-shop{
 
+}
+
+#blog-section{
+    .blogs{
+        width: 100%;
+        min-height: 700px;
+    }
 }
 
 

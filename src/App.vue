@@ -44,4 +44,8 @@ export default {
   ul{
     list-style-type: none;
   }
+
+  img{
+    display: block;
+  }
 </style>

@@ -1,19 +1,22 @@
 <script>
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 export default {
+    components: { FontAwesomeIcon },
     props: {
         singleCourse: Object,
     },
     data() {
-        return {};
+        return {
+            
+        }
     },
     methods: {
         getImagePath(path) {
             return new URL(path, import.meta.url).href;
         },
     },
-    components: { FontAwesomeIcon }
 }
 </script>
 
@@ -24,7 +27,7 @@ export default {
         <div class="card-img-top">
             <img :src="getImagePath(singleCourse.image)" class="img-fluid" alt="">
         </div>
-    
+        
         <div class="card-body p-3 align-items-start">
 
             <div class="card-text">
@@ -101,7 +104,7 @@ export default {
         left: 0%;
         border: 1px solid transparent;
         
-        transition: all ease-in-out 0.4s;
+        transition: all ease-in-out 0.5s;
 
         .card-text{
             min-height: 150px;
@@ -120,18 +123,22 @@ export default {
         
         .info{
             .col{
+
                 >*{
                     display: inline-block;
                 }
+
                 small{
                     margin-left: 0.3rem;
                 }
+
             }
         }
         
     }
 
     &:hover{
+        height: 80%;
         .card-body{
             position: absolute;
             top: 80%;

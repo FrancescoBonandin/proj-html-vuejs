@@ -28,7 +28,7 @@ export default {
             <img :src="getImagePath(element.image)" class="img-fluid" alt="">
         </div>
     
-        <div class="card-body align-items-start">
+        <div class="card-body ">
     
             <h4>
                 {{element.title}}

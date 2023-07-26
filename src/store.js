@@ -178,8 +178,49 @@ export const store= reactive({
     ],
     blogPost:[
         {
-            image:
-        }
+            image:'../assets/img/blog/artist-blog-03-480x356.jpeg',
+            title:'Brush Strokes Energize Trees in Paintings',
+            date:'May 15, 2020',
+            views:'688'
+        },
+        {
+            image:'../assets/img/blog/artist-blog-02-500x680.jpg',
+            title:'Connection between Self-Portrait and Identity',
+            date:'May 15, 2020',
+            views:'397'
+        },
+        {
+            image:'../assets/img/blog/artist-blog-01-480x356.jpg',
+            title:'Poket-Sized Notebooks Hold Miniature Paintings',
+            date:'May 15, 2020',
+            views:'603'
+        },
+    ],
+    events:[
+        {
+            image:'../assets/img/events/artist-event-04-250x300.jpg',
+            date:'Nov 22, 2020',
+            title:'Storytelling Workshop',
+            location:'Texas,US'
+        },
+        {
+            image:'../assets/img/events/artist-event-03-250x300.jpg',
+            date:'Oct 10, 2020',
+            title:'Painting Art Contest 2020',
+            location:'New York,US'
+        },
+        {
+            image:'../assets/img/events/artist-event-02-250x300.jpg',
+            date:'Nov 23, 2020',
+            title:'International Art Fair 2020',
+            location:'Hamburg,Germany'
+        },
+        {
+            image:'../assets/img/events/artist-event-01-250x300.jpg',
+            date:'Dec 15, 2020',
+            title:'Street Performance: Call For Artist',
+            location:'Illinois,US'
+        },
     ]
 
 })
