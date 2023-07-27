@@ -8,7 +8,8 @@ export default {
     name: "FooterComponent",
     data() {
         return {
-            store
+            store,
+            mouseOnFooter:false
         }
     },
     methods: {
@@ -18,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <footer>
+    <footer @mouseenter="()=>mouseOnFooter=true " @mouseleave="()=>mouseOnFooter=false ">
 
         <section id="footer-top">
 
@@ -80,7 +81,7 @@ export default {
 
                             &copy;2020 MaxCoach.All Rights Reserved
 
-                            <MyButton class="fixed-btn" :text="'&uparrow;'" :btnclass="'round'" :anchor="'#to-the-top'"/>
+                            <MyButton class="fixed-btn" :class="mouseOnFooter==true ? 'my-visible':''" :text="'&uparrow;'" :btnclass="'round'" :anchor="'#to-the-top'"/>
 
                         </small>
 
@@ -145,6 +146,15 @@ export default {
             .col-7{
                 form{
                     width: 70%;
+
+                    .form-floating{
+                        >.form-control:focus{
+                            ~label::after{
+                                background-color:transparent;
+                            }
+                        }
+                    }
+
                     .span{
                         cursor: pointer;
                     }
@@ -164,11 +174,16 @@ export default {
     }
 
     .fixed-btn{
+        display: none;
         position: fixed;
         z-index: 1;
         bottom: 20px;
         right: 20px;
         transform: translate(-50%,-50%);
+
+        &.my-visible{
+            display: block;
+        }
     }
 }
 

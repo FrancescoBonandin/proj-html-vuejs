@@ -148,7 +148,6 @@ export default {
     &:hover{
         .content-container{
             position: absolute;
-            width: 90%;
             top: 50%;
             left: 0;
             border: 1px solid $color-primary;
