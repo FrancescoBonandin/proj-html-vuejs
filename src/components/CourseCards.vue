@@ -28,9 +28,9 @@ export default {
             <img :src="getImagePath(singleCourse.image)" class="img-fluid" alt="">
         </div>
         
-        <div class="card-body p-2 align-items-start">
+        <div class="card-body p-0 align-items-start">
 
-            <div class="content-container">
+            <div class="content-container p-2">
 
                 <div class="card-text">
     
@@ -130,14 +130,13 @@ export default {
         
         .info{
             .col{
-            
-                >*{
+                
+                *{
+                    margin-left: 0.3rem;
+                }
+                > div::first-child{
                     display: inline-block;
                     padding: 5px;
-                }
-
-                small{
-                    margin-left: 0.3rem;
                 }
 
             }
